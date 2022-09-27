@@ -7,13 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-        <h1>Skills</h1>
+        <h1><%= title %> </h1>
         <ul>
           <% skills.forEach(function(t) { %>
             <li>
-              <%= t.skill %>
+              <a href="../skills/<%= t.id %> ">
+                <%= t.skill %>
+              </a>
                 - 
-              <%= t.done ? 'done' : 'not done' %>
+              <%= t.done ? 'he can' : 'he cant' %>
             </li>
           <% }); %>
         </ul>
