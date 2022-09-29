@@ -6,6 +6,7 @@ module.exports = {
     show, 
     new: newSkill,
     create,
+    delete: deleteSkill,
 }
 
 function index(req, res) {
@@ -30,6 +31,10 @@ function create(req, res) {
     // req.body is the value we pass inside the new skill we created 
     // console.log('This is a console.log', req.body)
     Skill.create(req.body)
+    res.redirect('/skills')
+}
 
+function deleteSkill(req, res) {
+    Skill.deleteOne(req.params.id)
     res.redirect('/skills')
 }

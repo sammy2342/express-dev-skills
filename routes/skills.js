@@ -15,4 +15,7 @@ router.get('/:id', skillsCtrl.show)
 //localhost3000:/skills create a new post
 router.post('/', skillsCtrl.create)
 
+//localhost3000:/skills/:id 
+router.delete('/:id', skillsCtrl.delete)
+
 module.exports = router;
