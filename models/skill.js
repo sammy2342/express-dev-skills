@@ -7,7 +7,8 @@
   
   module.exports = {
     getAll, 
-    getOne
+    getOne,
+    create
   };
   
   function getAll() {
@@ -20,4 +21,12 @@
   // The Array.prototype.find iterator method is
   // ideal for finding objects within an array
   return skills.find(skill => skill.id === id);
+  }
+
+  function create(skill) {
+    // this gets a random id 
+    skill.id = Date.now() % 1000000
+    // every new skill woudnt be done 
+    skill.done = false 
+    skills.push(skill)
   }
