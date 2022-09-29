@@ -18,4 +18,10 @@ router.post('/', skillsCtrl.create)
 //localhost3000:/skills/:id 
 router.delete('/:id', skillsCtrl.delete)
 
+//locaohost3000:/skills/:id/edit
+router.get('/:id/edit', skillsCtrl.edit)
+
+//localhost3000:/skills/:id
+router.put('/:id', skillsCtrl.update)
+
 module.exports = router;
